@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="FoodieHub - Good Food. Good Mood. Discover delicious food and order your favorites.">
+
+    <title>FoodieHub | Good Food. Good Mood.</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         HEADER / NAVIGATION
+    =============================== -->
+    <header class="header" id="header">
+
+        <nav class="navbar container">
+
+            <a href="#home" class="logo">
+                <span class="logo-icon">🍴</span>
+                <span>Foodie<span>Hub</span></span>
+            </a>
+
+            <div class="nav-menu" id="navMenu">
+
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+
+            </div>
+
+            <div class="nav-actions">
+
+                <!-- Search -->
+                <button class="icon-btn" id="openSearchBtn" aria-label="Open search">
+                    🔍
+                </button>
+
+                <!-- Favorites -->
+                <button class="icon-btn counter-btn" id="favoritesBtn" aria-label="Favorites">
+                    ❤️
+                    <span class="counter" id="favoriteCount">0</span>
+                </button>
+
+                <!-- Cart -->
+                <button class="icon-btn counter-btn" id="cartBtn" aria-label="Shopping cart">
+                    🛒
+                    <span class="counter" id="cartCount">0</span>
+                </button>
+
+                <!-- Theme -->
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+                    🌙
+                </button>
+
+                <!-- Mobile Menu -->
+                <button class="hamburger" id="hamburger" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+         SEARCH PANEL
+    =============================== -->
+    <div class="search-panel" id="searchPanel">
+
+        <div class="search-container">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search pizza, burger, biryani, dosa..."
+                aria-label="Search food">
+
+            <button id="closeSearchBtn" class="close-btn" aria-label="Close search">
+                ✕
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <main>
+
+        <!-- ==============================
+             HERO SECTION
+        =============================== -->
+        <section class="hero section" id="home">
+
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+
+                    <span class="hero-badge">
+                        🔥 Fresh • Fast • Delicious
+                    </span>
+
+                    <h1>
+                        Delicious Food,
+                        <span>Delivered With Love</span>
+                    </h1>
+
+                    <p>
+                        Discover your favorite meals, explore new flavors,
+                        and enjoy every bite with FoodieHub.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#menu" class="btn btn-primary">
+                            Explore Menu
+                        </a>
+
+                        <button class="btn btn-outline" id="heroOrderBtn">
+                            🛒 Order Now
+                        </button>
+
+                    </div>
+
+                    <div class="hero-highlights">
+
+                        <div class="highlight">
+                            <strong>⭐ 4.8+</strong>
+                            <span>Rating</span>
+                        </div>
+
+                        <div class="highlight">
+                            <strong>🍽️ 100+</strong>
+                            <span>Delicious Dishes</span>
+                        </div>
+
+                        <div class="highlight">
+                            <strong>🚚 30 min</strong>
+                            <span>Fast Delivery</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-image-wrapper">
+
+                    <div class="hero-circle"></div>
+
+                    <img
+                        class="hero-image"
+                        src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85"
+                        alt="Fresh healthy food bowl">
+
+                    <div class="floating-card floating-rating">
+                        ⭐
+                        <div>
+                            <strong>4.8</strong>
+                            <span>Excellent</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-card floating-delivery">
+                        🚴
+                        <div>
+                            <strong>30 min</strong>
+                            <span>Fast Delivery</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             CATEGORIES
+        =============================== -->
+        <section class="section categories-section" id="categories">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-label">EXPLORE</span>
+                        <h2>Explore Categories</h2>
+                    </div>
+
+                    <p>
+                        Find exactly what you're craving today.
+                    </p>
+
+                </div>
+
+                <div class="category-grid">
+
+                    <button class="category-card" data-category="Pizza">
+                        <span class="category-icon">🍕</span>
+                        <strong>Pizza</strong>
+                        <small>Cheesy & fresh</small>
+                    </button>
+
+                    <button class="category-card" data-category="Burger">
+                        <span class="category-icon">🍔</span>
+                        <strong>Burgers</strong>
+                        <small>Juicy & tasty</small>
+                    </button>
+
+                    <button class="category-card" data-category="Noodles">
+                        <span class="category-icon">🍜</span>
+                        <strong>Noodles</strong>
+                        <small>Hot & spicy</small>
+                    </button>
+
+                    <button class="category-card" data-category="South Indian">
+                        <span class="category-icon">🍛</span>
+                        <strong>South Indian</strong>
+                        <small>Traditional taste</small>
+                    </button>
+
+                    <button class="category-card" data-category="Chicken">
+                        <span class="category-icon">🍗</span>
+                        <strong>Chicken</strong>
+                        <small>Protein packed</small>
+                    </button>
+
+                    <button class="category-card" data-category="Healthy Food">
+                        <span class="category-icon">🥗</span>
+                        <strong>Healthy</strong>
+                        <small>Fresh & healthy</small>
+                    </button>
+
+                    <button class="category-card" data-category="Desserts">
+                        <span class="category-icon">🍰</span>
+                        <strong>Desserts</strong>
+                        <small>Sweet moments</small>
+                    </button>
+
+                    <button class="category-card" data-category="Drinks">
+                        <span class="category-icon">🥤</span>
+                        <strong>Drinks</strong>
+                        <small>Cool & refreshing</small>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             MENU SECTION
+        =============================== -->
+        <section class="section menu-section" id="menu">
+
+            <div class="container">
+
+                <div class="section-heading menu-heading">
+
+                    <div>
+                        <span class="section-label">OUR MENU</span>
+                        <h2>Popular Dishes</h2>
+                    </div>
+
+                    <button class="text-btn" id="viewAllBtn">
+                        View All →
+                    </button>
+
+                </div>
+
+
+                <!-- Search + Filters -->
+
+                <div class="menu-controls">
+
+                    <div class="menu-search">
+
+                        <span>🔍</span>
+
+                        <input
+                            type="search"
+                            id="menuSearch"
+                            placeholder="Search your favorite food...">
+
+                    </div>
+
+                    <div class="filter-buttons" id="filterButtons">
+
+                        <button class="filter-btn active" data-filter="All">
+                            All
+                        </button>
+
+                        <button class="filter-btn" data-filter="Pizza">
+                            Pizza
+                        </button>
+
+                        <button class="filter-btn" data-filter="Burger">
+                            Burger
+                        </button>
+
+                        <button class="filter-btn" data-filter="South Indian">
+                            South Indian
+                        </button>
+
+                        <button class="filter-btn" data-filter="Noodles">
+                            Noodles
+                        </button>
+
+                        <button class="filter-btn" data-filter="Chicken">
+                            Chicken
+                        </button>
+
+                        <button class="filter-btn" data-filter="Desserts">
+                            Desserts
+                        </button>
+
+                        <button class="filter-btn" data-filter="Drinks">
+                            Drinks
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="food-grid" id="foodGrid">
+                    <!-- Food cards generated using JavaScript -->
+                </div>
+
+                <div class="no-results hidden" id="noResults">
+
+                    <div>🍽️</div>
+
+                    <h3>Sorry, no food found.</h3>
+
+                    <p>Try another search or category.</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             OFFER SECTION
+        =============================== -->
+        <section class="offer-section section">
+
+            <div class="container">
+
+                <div class="offer-card">
+
+                    <div class="offer-content">
+
+                        <span class="offer-label">
+                            🏷️ WEEKEND SPECIAL
+                        </span>
+
+                        <h2>Get <span>20% OFF</span></h2>
+
+                        <p>
+                            Treat yourself this weekend with delicious
+                            food at an amazing price.
+                        </p>
+
+                        <button class="btn btn-light" id="claimOffer">
+                            Claim Offer
+                        </button>
+
+                    </div>
+
+                    <div class="countdown-container">
+
+                        <p>Offer ends in</p>
+
+                        <div class="countdown">
+
+                            <div>
+                                <strong id="days">02</strong>
+                                <span>Days</span>
+                            </div>
+
+                            <b>:</b>
+
+                            <div>
+                                <strong id="hours">14</strong>
+                                <span>Hours</span>
+                            </div>
+
+                            <b>:</b>
+
+                            <div>
+                                <strong id="minutes">35</strong>
+                                <span>Minutes</span>
+                            </div>
+
+                            <b>:</b>
+
+                            <div>
+                                <strong id="seconds">20</strong>
+                                <span>Seconds</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             ABOUT SECTION
+        =============================== -->
+        <section class="section about-section" id="about">
+
+            <div class="container">
+
+                <div class="about-grid">
+
+                    <div class="about-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=85"
+                            alt="Restaurant food preparation">
+
+                        <div class="experience-card">
+                            <strong>5+</strong>
+                            <span>Years of Taste</span>
+                        </div>
+
+                    </div>
+
+                    <div class="about-content">
+
+                        <span class="section-label">
+                            WHY FOODIEHUB?
+                        </span>
+
+                        <h2>
+                            More Than Food,
+                            <span>It's an Experience.</span>
+                        </h2>
+
+                        <p>
+                            At FoodieHub, we believe great food brings people
+                            together. We connect food lovers with delicious,
+                            fresh and carefully prepared meals.
+                        </p>
+
+                        <p>
+                            From traditional South Indian flavors to modern
+                            favorites, every dish is selected to make your
+                            dining experience memorable.
+                        </p>
+
+                        <div class="feature-grid">
+
+                            <div class="feature-card">
+                                <span>🍴</span>
+                                <strong>Fresh Ingredients</strong>
+                                <small>Quality ingredients every day.</small>
+                            </div>
+
+                            <div class="feature-card">
+                                <span>🚚</span>
+                                <strong>Fast Delivery</strong>
+                                <small>Hot food at your doorstep.</small>
+                            </div>
+
+                            <div class="feature-card">
+                                <span>👨‍🍳</span>
+                                <strong>Expert Chefs</strong>
+                                <small>Prepared with care and passion.</small>
+                            </div>
+
+                            <div class="feature-card">
+                                <span>💳</span>
+                                <strong>Easy Ordering</strong>
+                                <small>Simple and convenient checkout.</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             RESTAURANTS
+        =============================== -->
+        <section class="section restaurant-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-label">
+                            NEAR YOU
+                        </span>
+
+                        <h2>Popular Near You</h2>
+                    </div>
+
+                    <p>
+                        Discover restaurants loved by foodies.
+                    </p>
+
+                </div>
+
+                <div class="restaurant-grid">
+
+                    <article class="restaurant-card">
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=80"
+                                alt="Spice Garden restaurant">
+
+                            <span class="restaurant-badge">
+                                ⭐ 4.7
+                            </span>
+
+                        </div>
+
+                        <div class="restaurant-content">
+
+                            <h3>Spice Garden</h3>
+
+                            <p>South Indian • Biryani</p>
+
+                            <div class="restaurant-info">
+                                <span>🚴 25–35 min</span>
+                                <span>₹199+</span>
+                            </div>
+
+                            <button
+                                class="btn btn-primary btn-small restaurant-menu-btn">
+                                View Menu
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="restaurant-card">
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=700&q=80"
+                                alt="Urban Bites restaurant">
+
+                            <span class="restaurant-badge">
+                                ⭐ 4.8
+                            </span>
+
+                        </div>
+
+                        <div class="restaurant-content">
+
+                            <h3>Urban Bites</h3>
+
+                            <p>Burgers • Pizza • Fast Food</p>
+
+                            <div class="restaurant-info">
+                                <span>🚴 20–30 min</span>
+                                <span>₹159+</span>
+                            </div>
+
+                            <button
+                                class="btn btn-primary btn-small restaurant-menu-btn">
+                                View Menu
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="restaurant-card">
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80"
+                                alt="Taste Express restaurant">
+
+                            <span class="restaurant-badge">
+                                ⭐ 4.6
+                            </span>
+
+                        </div>
+
+                        <div class="restaurant-content">
+
+                            <h3>Taste Express</h3>
+
+                            <p>Noodles • Chinese • Chicken</p>
+
+                            <div class="restaurant-info">
+                                <span>🚴 30–40 min</span>
+                                <span>₹149+</span>
+                            </div>
+
+                            <button
+                                class="btn btn-primary btn-small restaurant-menu-btn">
+                                View Menu
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             HOW IT WORKS
+        =============================== -->
+        <section class="section process-section">
+
+            <div class="container">
+
+                <div class="center-heading">
+
+                    <span class="section-label">SIMPLE PROCESS</span>
+
+                    <h2>How It Works</h2>
+
+                    <p>
+                        Your favorite food is just a few clicks away.
+                    </p>
+
+                </div>
+
+                <div class="process-grid">
+
+                    <div class="process-card">
+
+                        <div class="step-number">01</div>
+
+                        <span class="process-icon">🔍</span>
+
+                        <h3>Choose Your Food</h3>
+
+                        <p>
+                            Explore delicious dishes and discover something
+                            you'll love.
+                        </p>
+
+                    </div>
+
+                    <div class="process-card">
+
+                        <div class="step-number">02</div>
+
+                        <span class="process-icon">🛒</span>
+
+                        <h3>Add To Cart</h3>
+
+                        <p>
+                            Select your favorite food and adjust the quantity.
+                        </p>
+
+                    </div>
+
+                    <div class="process-card">
+
+                        <div class="step-number">03</div>
+
+                        <span class="process-icon">📦</span>
+
+                        <h3>Place Your Order</h3>
+
+                        <p>
+                            Enter your delivery details and confirm your order.
+                        </p>
+
+                    </div>
+
+                    <div class="process-card">
+
+                        <div class="step-number">04</div>
+
+                        <span class="process-icon">😋</span>
+
+                        <h3>Enjoy Your Meal</h3>
+
+                        <p>
+                            Sit back, relax and enjoy your delicious meal.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             TESTIMONIALS
+        =============================== -->
+        <section class="section testimonials-section" id="reviews">
+
+            <div class="container">
+
+                <div class="center-heading">
+
+                    <span class="section-label">
+                        CUSTOMER LOVE
+                    </span>
+
+                    <h2>What Our Customers Say</h2>
+
+                </div>
+
+                <div class="testimonial-wrapper">
+
+                    <button
+                        class="slider-btn"
+                        id="prevTestimonial"
+                        aria-label="Previous testimonial">
+                        ←
+                    </button>
+
+                    <div class="testimonial-slider" id="testimonialSlider">
+
+                        <article class="testimonial active">
+
+                            <div class="quote">“</div>
+
+                            <div class="stars">★★★★★</div>
+
+                            <p>
+                                The food was amazing and delivery was really
+                                quick! I loved the whole FoodieHub experience.
+                            </p>
+
+                            <div class="customer">
+                                <div class="avatar">P</div>
+
+                                <div>
+                                    <strong>Priya</strong>
+                                    <span>Food Lover</span>
+                                </div>
+                            </div>
+
+                        </article>
+
+
+                        <article class="testimonial">
+
+                            <div class="quote">“</div>
+
+                            <div class="stars">★★★★★</div>
+
+                            <p>
+                                FoodieHub makes discovering new food so easy.
+                                The menu is simple and the ordering experience
+                                is excellent.
+                            </p>
+
+                            <div class="customer">
+                                <div class="avatar">R</div>
+
+                                <div>
+                                    <strong>Rahul</strong>
+                                    <span>Regular Customer</span>
+                                </div>
+                            </div>
+
+                        </article>
+
+
+                        <article class="testimonial">
+
+                            <div class="quote">“</div>
+
+                            <div class="stars">★★★★★</div>
+
+                            <p>
+                                The biryani was delicious. Definitely ordering
+                                again! Great food and very smooth experience.
+                            </p>
+
+                            <div class="customer">
+                                <div class="avatar">A</div>
+
+                                <div>
+                                    <strong>Ananya</strong>
+                                    <span>FoodieHub Customer</span>
+                                </div>
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <button
+                        class="slider-btn"
+                        id="nextTestimonial"
+                        aria-label="Next testimonial">
+                        →
+                    </button>
+
+                </div>
+
+                <div class="slider-dots" id="sliderDots"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             CONTACT
+        =============================== -->
+        <section class="section contact-section" id="contact">
+
+            <div class="container">
+
+                <div class="contact-grid">
+
+                    <div class="contact-info">
+
+                        <span class="section-label">
+                            GET IN TOUCH
+                        </span>
+
+                        <h2>Let's Talk About Food</h2>
+
+                        <p>
+                            Have a question, suggestion or feedback?
+                            We'd love to hear from you.
+                        </p>
+
+                        <div class="contact-items">
+
+                            <div class="contact-item">
+                                <span>📍</span>
+                                <div>
+                                    <strong>Location</strong>
+                                    <p>Madurai, Tamil Nadu, India</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <span>📞</span>
+                                <div>
+                                    <strong>Phone</strong>
+                                    <p>+91 XXXXX XXXXX</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <span>📧</span>
+                                <div>
+                                    <strong>Email</strong>
+                                    <p>hello@foodiehub.com</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <form class="contact-form" id="contactForm">
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="contactName">
+                                    Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="contactName"
+                                    placeholder="Your name"
+                                    required>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label for="contactEmail">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="contactEmail"
+                                    placeholder="you@example.com"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="contactMessage">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="contactMessage"
+                                rows="6"
+                                placeholder="Write your message..."
+                                required></textarea>
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary">
+                            Send Message →
+                        </button>
+
+                        <div
+                            class="form-success hidden"
+                            id="contactSuccess">
+                            ✅ Thank you! Your message has been sent.
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <a href="#home" class="logo">
+                        <span class="logo-icon">🍴</span>
+                        <span>Foodie<span>Hub</span></span>
+                    </a>
+
+                    <p>
+                        Good Food. Good Mood.
+                    </p>
+
+                    <p class="footer-description">
+                        Discover delicious food, explore new flavors
+                        and enjoy every bite.
+                    </p>
+
+                    <div class="social-links">
+
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="YouTube">▶</a>
+                        <a href="#" aria-label="X Twitter">𝕏</a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Quick Links</h3>
+
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Information</h3>
+
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#categories">Categories</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Opening Hours</h3>
+
+                    <p>Monday – Friday</p>
+                    <strong>10:00 AM – 10:00 PM</strong>
+
+                    <p>Saturday – Sunday</p>
+                    <strong>9:00 AM – 11:00 PM</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 FoodieHub. All Rights Reserved.
+                </p>
+
+                <p>
+                    Made with ❤️ for food lovers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==============================
+         CART SIDEBAR
+    =============================== -->
+    <div class="overlay" id="cartOverlay"></div>
+
+    <aside class="cart-sidebar" id="cartSidebar">
+
+        <div class="cart-header">
+
+            <div>
+                <span class="section-label">YOUR ORDER</span>
+                <h2>Shopping Cart</h2>
+            </div>
+
+            <button
+                class="close-btn"
+                id="closeCartBtn"
+                aria-label="Close cart">
+                ✕
+            </button>
+
+        </div>
+
+
+        <div class="cart-items" id="cartItems">
+
+            <!-- Cart items generated by JavaScript -->
+
+        </div>
+
+
+        <div class="empty-cart hidden" id="emptyCart">
+
+            <div class="empty-icon">🛒</div>
+
+            <h3>Your cart is empty</h3>
+
+            <p>
+                Add something delicious to get started!
+            </p>
+
+            <button
+                class="btn btn-primary"
+                id="emptyCartBtn">
+                Explore Menu
+            </button>
+
+        </div>
+
+
+        <div class="cart-summary" id="cartSummary">
+
+            <div class="summary-line">
+                <span>Subtotal</span>
+                <strong id="subtotal">₹0</strong>
+            </div>
+
+            <div class="summary-line">
+                <span>Delivery</span>
+                <strong id="deliveryFee">₹0</strong>
+            </div>
+
+            <div class="summary-line discount-line">
+                <span>Discount</span>
+                <strong id="discount">₹0</strong>
+            </div>
+
+            <div class="summary-total">
+                <span>Total</span>
+                <strong id="grandTotal">₹0</strong>
+            </div>
+
+            <button
+                class="btn btn-primary checkout-btn"
+                id="checkoutBtn">
+                Proceed to Checkout →
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ==============================
+         FAVORITES MODAL
+    =============================== -->
+    <div class="modal-overlay" id="favoritesModal">
+
+        <div class="modal favorites-modal">
+
+            <button
+                class="modal-close"
+                id="closeFavoritesBtn">
+                ✕
+            </button>
+
+            <div class="modal-header">
+                <span class="modal-icon">❤️</span>
+                <h2>Your Favorites</h2>
+                <p>Your favorite dishes are saved here.</p>
+            </div>
+
+            <div
+                class="favorites-list"
+                id="favoritesList">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==============================
+         CHECKOUT MODAL
+    =============================== -->
+    <div class="modal-overlay" id="checkoutModal">
+
+        <div class="modal checkout-modal">
+
+            <button
+                class="modal-close"
+                id="closeCheckoutBtn">
+                ✕
+            </button>
+
+            <div class="modal-header">
+
+                <span class="modal-icon">📦</span>
+
+                <h2>Complete Your Order</h2>
+
+                <p>
+                    Enter your details for this demo order.
+                </p>
+
+            </div>
+
+
+            <form id="checkoutForm">
+
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="mobileNumber">
+                            Mobile Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="mobileNumber"
+                            placeholder="10 digit mobile number"
+                            pattern="[0-9]{10}"
+                            maxlength="10"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="checkoutEmail">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="checkoutEmail"
+                            placeholder="you@example.com"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="address">
+                        Delivery Address
+                    </label>
+
+                    <textarea
+                        id="address"
+                        rows="3"
+                        placeholder="Enter your delivery address"
+                        required></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Payment Method
+                    </label>
+
+                    <div class="payment-options">
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="Cash on Delivery"
+                                checked>
+
+                            <span>💵</span>
+                            Cash on Delivery
+
+                        </label>
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="UPI">
+
+                            <span>📱</span>
+                            UPI
+
+                        </label>
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="Card">
+
+                            <span>💳</span>
+                            Card
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="checkout-total">
+
+                    <span>Order Total</span>
+
+                    <strong id="checkoutTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary checkout-submit">
+                    Place Order 🎉
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==============================
+         ORDER SUCCESS MODAL
+    =============================== -->
+    <div class="modal-overlay" id="successModal">
+
+        <div class="modal success-modal">
+
+            <div class="success-animation">
+                🎉
+            </div>
+
+            <h2>Order Placed Successfully!</h2>
+
+            <p>
+                Thank you for ordering from FoodieHub.
+                Your delicious meal is on its way!
+            </p>
+
+            <div class="order-number">
+                Order #FH<span id="orderNumber">2026</span>
+            </div>
+
+            <button
+                class="btn btn-primary"
+                id="successCloseBtn">
+                Continue Exploring
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==============================
+         TOAST NOTIFICATION
+    =============================== -->
+    <div class="toast" id="toast">
+
+        <span id="toastIcon">✅</span>
+
+        <div>
+            <strong id="toastTitle">Success</strong>
+            <p id="toastMessage">Item added successfully.</p>
+        </div>
+
+        <button id="closeToast" aria-label="Close notification">
+            ✕
+        </button>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
